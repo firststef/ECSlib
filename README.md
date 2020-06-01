@@ -28,3 +28,10 @@ Raylib is an open-source, cross-platform library for video game written in c99 t
 A game instance is usually managed by an object of the class **ECSManager**. ECSManager ties together a **SystemManager**, an **Event Manager** and a **Resource Manager**. Each system can be initilalized and runs idependently, but can sometimes communicate with other systems by **Events**.
 
 Just to mention a few important systems, ECSlib implements the **DrawSystem** (graphical manager), **InputSystem**, **AnimationSystem**, **PhysicsSystem** etc. Each system can run on a separate thread, however the current implementation works with an iterative approach to the concept.
+
+# Appendix
+
+How ECS Systems work
+![Systems](https://drive.google.com/uc?export=download&id=1ONHaTytjKBFrBXvTDf1QOMA3MaFs5X4O)
+
+*Each System only changes data by small, modular logic rules without interfering too much with other system's logic*.  
