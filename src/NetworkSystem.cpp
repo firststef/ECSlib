@@ -404,10 +404,7 @@ std::vector<Packet> NetworkSystem::send_queue_access(AccessType type, const Pack
 	
 	if (type == WRITE_TYPE)
 	{	
-		if (send_queue.is_full())
-		{
-			std::cout << "Warning: Send queue full, dropping data\n";
-		}
+		//if (send_queue.is_full()){std::cout << "Warning: Send queue full, dropping data\n";}
 		send_queue.push(data);
 	}
 	else
@@ -439,10 +436,7 @@ std::vector<Packet> NetworkSystem::receive_queue_access(AccessType type, const P
 
 	if (type == WRITE_TYPE)
 	{
-		if (receive_queue.is_full())
-		{
-			std::cout << "Warning: Receive queue full, dropping data\n";
-		}
+		//if (receive_queue.is_full()){std::cout << "Warning: Receive queue full, dropping data\n";}
 		if (!data.empty())
 			receive_queue.push(data);
 	}
