@@ -153,6 +153,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
    -DPLATFORM_DESKTOP
    -D_CRT_SECURE_NO_WARNINGS
    -D_CRT_NONSTDC_NO_DEPRECATE
+   -D_DEBUG
     )
     if(MSVC)
         target_compile_options(${PROJECT_NAME} PRIVATE  /W3 /MD /Od /EHsc)
