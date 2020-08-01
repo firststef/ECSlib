@@ -73,7 +73,6 @@ message("${PROJECT_NAME}: CURR BIN DIR: ${CMAKE_CURRENT_BINARY_DIR}")
 # Source Files
 set(SRC_FILES
     ./src/External.cpp
-    ./src/main.cpp
     ./src/NetworkSystem.cpp
     ./src/PhyFunctions.cpp
     ./src/PhyFunctions2.cpp
@@ -153,7 +152,6 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
    -DPLATFORM_DESKTOP
    -D_CRT_SECURE_NO_WARNINGS
    -D_CRT_NONSTDC_NO_DEPRECATE
-   -D_DEBUG
     )
     if(MSVC)
         target_compile_options(${PROJECT_NAME} PRIVATE  /W3 /MD /Od /EHsc)
@@ -174,8 +172,8 @@ endif()
 ########### Link & Dependencies ############################
 # Add project dependencies and Link to project             #
 ############################################################
-message(Current source dir:)
-message(${CMAKE_BINARY_DIR})
+
+add_dependencies(${PROJECT_NAME} raylib)
 if(MSVC)
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_link_libraries(${PROJECT_NAME} ${CMAKE_BINARY_DIR}/raylib/src/Debug/raylib_static.lib winmm.lib ws2_32.lib)
