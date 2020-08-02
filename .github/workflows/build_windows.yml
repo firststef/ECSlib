@@ -28,14 +28,4 @@ jobs:
     - name: Build ECSlib
       run: |
         cd build
-        msbuild ECSlib/ECSlib.vcxproj
-      
-    - name: Build CiopillisClient
-      run: |
-        cd build
-        msbuild CiopillisClient/CiopillisClient.vcxproj
-        
-    - name: Build CiopillisServer
-      run: |
-        cd build
-        msbuild CiopillisServer/CiopillisServer.vcxproj
+        msbuild ECSlib.vcxproj
