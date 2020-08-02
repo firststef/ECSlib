@@ -10,9 +10,32 @@ ECSlib was created as a collection of ECS classes for developing the Ciopillis g
 
 ECSlib is configured with cmake, you can either build it on Linux directly or generate a .sln file for Windows. 
 
-### Features
+### ECSlib Features:
 
+#### Entities
 
+#### Systems & Components
+
+* DrawSystem -- SpriteComponent -- TransformComponent
+* MouseInputSystem -- MouseInputComponent
+* KeyboardInputSystem -- KeyboardInputComponent
+* GridContainerSystem -- GridContainerComponent -- GridContainerChildComponent
+* PhysicsSystem -- PhysicsComponent
+* AnimationSystem -- AnimationComponent
+* DefferSystem
+* HitBoxSystem -- HitBoxComponent
+* NetworkSystem
+
+#### Events
+
+* MouseEvent -> input
+* KeyboardEvent -> input
+* GridAddRemoveEvent -> add/remove from a grid container
+* SystemControlEvent -> enable/disable systems
+* AnimationEvent -> on change animation, notify
+* DefferEvent -> do something later
+* HitBoxEvent -> on collision, notify
+* NetworkEvent -> on packet, notify
 
 ### ECS
 
