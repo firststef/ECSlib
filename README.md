@@ -6,6 +6,14 @@ A library with ECS classes in c++ using raylib
 
 ECSlib was created as a collection of ECS classes for developing the Ciopillis game, found here: https://github.com/firststef/Ciopillis. It was separated as a library for use in other projects.
 
+### Install
+
+ECSlib is configured with cmake, you can either build it on Linux directly or generate a .sln file for Windows. 
+
+### Features
+
+
+
 ### ECS
 
 The game was built with the use of an [Entity Component System](https://en.wikipedia.org/wiki/Entity_component_system) framework, followingly referenced as ECSlib.
